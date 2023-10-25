@@ -1,11 +1,13 @@
 package main
 
 import (
+	"api-gin/database"
 	"api-gin/models"
 	"api-gin/routes"
 )
 
 func main() {
+	database.ConectaComBancoDeDados()
 	models.Alunos = []models.Aluno{
 		{
 			Nome: "teste",
